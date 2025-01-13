@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  min-height: 100vh; /* Usado para o site sempre tomar o espaço total da tela*/
+  font-family: "Jost", sans-serif; /*Fonte principal do projeto */
+  font-weight: 400;
+  color: #292f36;
+  background-color: white;
+}
+
+a {
+  text-decoration: none; /*Tirar algum estilo padrao que os navegadores colocam em links*/
+}
+
+/* MAIN COLOR */
+.primary-background {
+  background-color: #0c70f2;
+}
+
+.primary-color {
+  color: #0c70f2;
+}
+
+.secondary-background {
+  background-color: #1d1d1d;
+}
+
+.secondary-color {
+  color: #1d1d1d;
+}
+
+.tertiary-background {
+  background-color: #f6f6f6;
+}
+
+.tertiary-color {
+  color: #f6f6f6;
+}
+
+.grey-1-color {
+  color: #4D5053;
+}
+
+/* FORM */
+.form-input {
+  border: none;
+  border-bottom: 1px solid #292f36;
+  color: #292f36;
+  font-size: 22px;
+  font-family: 'jost', sans-serif;
+  padding: 0 0 13px 0;
+  outline: none;
+  width: 100%;
+}
+
+.form-input::placeholder {
+  color: #292f36;
+  opacity: 1;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DM Serif Display", serif;
+  font-size: inherit; /* Propriedade prioriza fonte padrao do navegador */
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2.5px;
+}
+
+p {
+  line-height: 150%;
+  font-size: 22px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+/* GRID => Classe criada para manter o conteudo da página centralizado */
+.container {
+  box-sizing: border-box; /* Faz com que mesmo usando "padding/margin" o meu elemento nao ultrapasse os 1200px */
+  margin: 0 auto; /* Centraliza meu elemento no centro da página */
+  max-width: 1200px; /* max-width impõe um limite máximo sem forçar a largura mínima */
+  width: 100%;
+  position: relative;
+  padding: 0 30px;
+}
+
+.al-center {
+  /* Classe para centralizar itens */
+  align-items: center;
+}
+
+.al-end {
+  align-items: end;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: end;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  
+  .mobile-fd-column {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,86 @@
+header {
+    background-color: white;
+    padding: 50px 0;
+}
+
+header ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #292F36;
+    margin: 0 0 0 50px;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #0c70f2;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav.open {
+        display: flex;
+    }
+
+    nav {
+        background-color: #1D1D1D;
+        flex-direction: column;
+        align-items: end;
+        border-left: solid 10px #333333;
+        display: none; /*Manter o menu fechado*/
+        height: 100%; /*Pegar a altura total da tela*/
+        padding: 40px; /*Espacamento interno*/
+        position: fixed; /*Posicao fixa na tela apos aberto, ficar sempre aberto*/
+        right: 0; /*Usado com position fixed, posiciona o elemento encostado no lado direito da janela*/
+        top: 0; /*Usado com position fixed, posiciona o elemento encostado no topo da janela*/
+        width: 40vw; /*Elemento vai ocupar 40% da janela*/
+        z-index: 1; /*Posiciona o elemento a fentre de outros elementos na pagina. Essa propriedade só funciona para
+        elementos que tem o posicionamento definido como: relative, absolute, fixed e sticky*/
+        box-shadow: -50vw 0px 0px 0px rgba(0, 0, 0, 0.75); /*Este código cria uma sombra preta opaca (75%) que é 
+        deslocada significativamente para a esquerda (-50% da largura da tela), sem desfoque ou propagação.*/
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: flex; /*Usado tbm para controlar seu alinhamento, espaçamento e distribuição.*/
+    }
+
+    nav a {
+        border-bottom: solid 1px white;
+        margin: 0 0 10px 0;
+        color: white;
+        font-size: 20px;
+        line-height: 150%;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        margin: 0 0 12px;
+        padding: 0px;
+        width: fit-content;
+        cursor: pointer;
+    }
+}
